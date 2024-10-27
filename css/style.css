@@ -1,0 +1,60 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Optional: Set a font family */
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75em; /* Adjust as needed */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; /* Adjust as needed */
+}
+
+.section {
+    border: 1px solid black;
+    margin: 10px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+    flex: 1; /* Allows sections to grow equally */
+}
+
+/* Section title styles */
+.title {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: lightblue; /* Change as needed */
+    border: 1px solid black;
+    padding: 5px; /* Adjust as needed */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .section {
+        flex: 1 0 100%; /* Full width on mobile */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        flex: 1 0 50%; /* Two sections side by side on tablet */
+    }
+    .section:nth-child(3) {
+        flex: 1 0 100%; /* Third section full width */
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        flex: 1; /* Three equal sections on desktop */
+    }
+}
